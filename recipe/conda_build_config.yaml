@@ -66,10 +66,10 @@ version:
   - 1.65.0
 channel_sources:
   - conda-forge
-  #- conda-forge/label/rust_dev,conda-forge
+  - conda-forge/label/rust_dev,conda-forge
 channel_targets:
   - conda-forge main
-  #- conda-forge rust_dev
+  - conda-forge rust_dev
 zip_keys:
   - - cross_target_platform
     - rust_arch
@@ -79,4 +79,4 @@ zip_keys:
     - MACOSX_DEPLOYMENT_TARGET
   - - channel_sources
     - channel_targets
-    # - version
+    - version
