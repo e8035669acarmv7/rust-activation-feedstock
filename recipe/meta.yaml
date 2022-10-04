@@ -11,7 +11,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: rust_{{ cross_target_platform }}
@@ -33,7 +33,7 @@ outputs:
         - clang_{{ cross_target_platform }}
 {% elif cross_target_platform.startswith("win") %}
         - clang_{{ cross_target_platform }}    # [unix]
-        - vs2017_{{ cross_target_platform }}   # [win]
+        - vs2019_{{ cross_target_platform }}   # [win]
 {% endif %}
         - ld64_{{ target_platform }}  # [osx]
     test:
