@@ -29,7 +29,7 @@ rust_default_cc_build:
 target_platform:
 - linux-aarch64
 version:
-- 1.71.1
+- 1.72.0
 zip_keys:
 - - channel_sources
   - channel_targets
