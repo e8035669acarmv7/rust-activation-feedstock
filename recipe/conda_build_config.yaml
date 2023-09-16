@@ -1,38 +1,47 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '0'
-MACOSX_SDK_VERSION:
-- '0'
-cdt_name:
-- cos7
-cdt_arch:
-- armv7l
 cross_target_platform:
-- linux-armv7l
+  - linux-armv7l                        # [linux64 or armv7l]
 rust_arch:
-- armv7-unknown-linux-gnueabihf
-rust_arch_env:
-- ARMV7_UNKNOWN_LINUX_GNUEABIHF
+  - armv7-unknown-linux-gnueabihf       # [linux64 or armv7l]
+
 rust_arch_env_build:
-- ARMV7_UNKNOWN_LINUX_GNUEABIHF
-rust_default_cc:
-- armv7l-conda-linux-gnueabihf-cc
+  - X86_64_UNKNOWN_LINUX_GNU            # [linux64]
+  - ARMV7_UNKNOWN_LINUX_GNUEABIHF       # [armv7l]
+
+rust_arch_env:
+  - ARMV7_UNKNOWN_LINUX_GNUEABIHF       # [linux64 or armv7l]
+
 rust_default_cc_build:
-- armv7l-conda-linux-gnueabihf-cc
-target_platform:
-- linux-armv7l
+  - x86_64-conda-linux-gnu-cc           # [linux64]
+  - armv7l-conda-linux-gnueabihf-cc     # [armv7l]
+
+rust_default_cc:
+  - armv7l-conda-linux-gnueabihf-cc     # [linux64 or armv7l]
+
+# This should be max(build_platform_ver, cross_target_platform_ver)
+MACOSX_SDK_VERSION:
+  - 0                                   # [linux64 or armv7l]
+# This should match cross_target_platform_ver
+MACOSX_DEPLOYMENT_TARGET:
+  - 0                                   # [linux64 or armv7l]
+
 version:
   - 1.72.0
+  # - 1.74.0
 channel_sources:
-  - conda-forge
+  - e8035669acarmv7,conda-forge
+  # - conda-forge/label/rust_dev,conda-forge
 channel_targets:
-  - conda-forge main
+  - e8035669acarmv7 main
+  # - conda-forge rust_dev
 zip_keys:
-- - channel_sources
-  - channel_targets
-  - version
-- - cross_target_platform
-  - rust_arch
-  - rust_arch_env
-  - rust_default_cc
-  - MACOSX_SDK_VERSION
-  - MACOSX_DEPLOYMENT_TARGET
+  - - cross_target_platform
+    - rust_arch
+    - rust_arch_env
+    - rust_default_cc
+    - MACOSX_SDK_VERSION
+    - MACOSX_DEPLOYMENT_TARGET
+  - - channel_sources
+    - channel_targets
+    - version
+docker_image:
+  - e8035669/linux-anvil-armv7l # [os.environ.get("BUILD_PLATFORM") == "linux-armv7l"]
