@@ -46,6 +46,7 @@ outputs:
         - rustc --help
         - rustdoc --help
         - cargo --help
+        - ls $CONDA_PREFIX/bin
         - cargo install --force xsv
         - file $PREFIX/.cargo/bin/xsv  # [unix and not cross_target_platform == "win-64"]
         - file $PREFIX/.cargo/bin/xsv | grep "Mach-O 64-bit arm64 executable"  # [unix and cross_target_platform == "osx-arm64"]
