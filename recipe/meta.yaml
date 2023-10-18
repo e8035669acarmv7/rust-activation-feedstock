@@ -19,7 +19,7 @@ outputs:
     script: bld.bat  # [win]
     build:
       skip: True  # [win and vc<14]
-      # TODO: need more work to sepearte build and host toolchain on osx
+      # TODO: need more work to separate build and host toolchain on osx
       skip: True  # [cross_target_platform == "win-64" and osx]
     requirements:
       host:
@@ -48,7 +48,6 @@ outputs:
         - rustc --help
         - rustdoc --help
         - cargo --help
-        - ls $CONDA_PREFIX/bin
         - cargo install --force xsv
         - file $PREFIX/.cargo/bin/xsv  # [unix and not cross_target_platform == "win-64"]
         - file $PREFIX/.cargo/bin/xsv | grep "Mach-O 64-bit arm64 executable"  # [unix and cross_target_platform == "osx-arm64"]
