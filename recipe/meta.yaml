@@ -19,7 +19,6 @@ outputs:
     script: bld.bat  # [win]
     build:
       skip: True  # [win and vc<14]
-      skip: True # [not osx or not cross_target_platform != "win-64"]
     requirements:
       host:
         - rust-std-{{ rust_arch }}
