@@ -34,9 +34,10 @@ elif [[ "@cross_target_platform@" == win* ]]; then
   export CC_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
   export CXX_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
 
+  export LDFLAGS="$LDFLAGS -manifest:no"
+
   # Setup CMake Toolchain
   export CMAKE_GENERATOR=Ninja
-  export CMAKE_TOOLCHAIN_FILE_@CONDA_RUST_TARGET_LOWER@=$RECIPE_DIR/win_toolchain.cmake
 elif [[ "@cross_target_platform@" == osx* ]]; then
   export CARGO_BUILD_RUSTFLAGS="-C link-arg=-Wl,-rpath,${PREFIX:-${CONDA_PREFIX}}/lib"
   if [[ "${CONDA_BUILD:-}" != "" ]]; then
