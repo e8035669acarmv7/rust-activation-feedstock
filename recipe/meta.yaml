@@ -29,12 +29,12 @@ outputs:
         - gcc_{{ cross_target_platform }}
 {% elif cross_target_platform.startswith("osx") %}
         - clang_{{ cross_target_platform }}
-        # TODO: remove when clang_osx-64=17 is released
-        - clang_impl_{{ cross_target_platform }}
 {% elif cross_target_platform.startswith("win") %}
         - cmake                                # [unix]
         - ninja                                # [unix]
         - clang_{{ cross_target_platform }}    # [unix]
+        # TODO: remove when clang_osx-64=17 is released
+        - clang_impl_{{ target_platform }}     # [osx]
         - vs2019_{{ cross_target_platform }}   # [win]
 {% endif %}
         - ld64_{{ target_platform }}  # [osx]
