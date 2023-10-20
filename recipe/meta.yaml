@@ -32,6 +32,8 @@ outputs:
 {% elif cross_target_platform.startswith("osx") %}
         - clang_{{ cross_target_platform }}
 {% elif cross_target_platform.startswith("win") %}
+        - cmake                                # [unix]
+        - ninja                                # [unix]
         - clang_{{ cross_target_platform }}    # [unix]
         - vs2019_{{ cross_target_platform }}   # [win]
 {% endif %}

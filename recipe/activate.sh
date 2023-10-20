@@ -19,6 +19,10 @@ if [[ "@cross_target_platform@" == linux*  ]]; then
   export CARGO_BUILD_RUSTFLAGS="-C link-arg=-Wl,-rpath-link,${PREFIX:-${CONDA_PREFIX}}/lib -C link-arg=-Wl,-rpath,${PREFIX:-${CONDA_PREFIX}}/lib"
 elif [[ "@cross_target_platform@" == win* ]]; then
   export CARGO_TARGET_@rust_arch_env@_LINKER=${CONDA_PREFIX}/bin/lld-link
+
+  # Setup CMake Toolchain
+  export CMAKE_GENERATOR=Ninja
+  export CMAKE_TOOLCHAIN_FILE_@CONDA_RUST_TARGET_LOWER@=$RECIPE_DIR/win_toolchain.cmake
 elif [[ "@cross_target_platform@" == osx* ]]; then
   export CARGO_BUILD_RUSTFLAGS="-C link-arg=-Wl,-rpath,${PREFIX:-${CONDA_PREFIX}}/lib"
   if [[ "${CONDA_BUILD:-}" != "" ]]; then
