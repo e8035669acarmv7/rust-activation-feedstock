@@ -20,6 +20,20 @@ if [[ "@cross_target_platform@" == linux*  ]]; then
 elif [[ "@cross_target_platform@" == win* ]]; then
   export CARGO_TARGET_@rust_arch_env@_LINKER=${CONDA_PREFIX}/bin/lld-link
 
+  # some rust crates need a linux gnu c compiler at buildtime
+  # thus we need to create custom cflags since the default ones are for clang
+  export AR_@CONDA_RUST_HOST_LOWER@="${AR}"
+  export AR_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/llvm-lib
+
+  export CFLAGS_@CONDA_RUST_HOST_LOWER@=""
+  export CFLAGS_@CONDA_RUST_TARGET_LOWER@="${CFLAGS}"
+
+  export CPPFLAGS_@CONDA_RUST_TARGET_LOWER@="${CPPFLAGS}"
+  export CPPFLAGS_@CONDA_RUST_HOST_LOWER@=""
+
+  export CC_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
+  export CXX_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
+
   # Setup CMake Toolchain
   export CMAKE_GENERATOR=Ninja
   export CMAKE_TOOLCHAIN_FILE_@CONDA_RUST_TARGET_LOWER@=$RECIPE_DIR/win_toolchain.cmake
