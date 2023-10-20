@@ -19,7 +19,7 @@ outputs:
     script: bld.bat  # [win]
     build:
       skip: True  # [win and vc<14]
-      # TODO: need more work to separate build and host toolchain on osx
+      # TODO: needs more work to separate build and host toolchain on osx
       skip: True  # [cross_target_platform == "win-64" and osx]
     requirements:
       host:
