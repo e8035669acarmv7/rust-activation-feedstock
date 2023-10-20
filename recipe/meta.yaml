@@ -78,7 +78,6 @@ outputs:
         - rustc --help
         - rustdoc --help
         - cargo --help
-        - ls $PREFIX/bin
         - cargo install --force xsv
 
 about:
