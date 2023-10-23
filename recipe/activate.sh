@@ -34,6 +34,8 @@ elif [[ "@cross_target_platform@" == win* ]]; then
   export CC_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
   export CXX_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
 
+  export LDFLAGS="$LDFLAGS -manifest:no"
+
   # Setup CMake Toolchain
   export CMAKE_GENERATOR=Ninja
 elif [[ "@cross_target_platform@" == osx* ]]; then
