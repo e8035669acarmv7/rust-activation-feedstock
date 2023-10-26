@@ -31,6 +31,9 @@ elif [[ "@cross_target_platform@" == win* ]]; then
   export CPPFLAGS_@CONDA_RUST_TARGET_LOWER@="${CPPFLAGS}"
   export CPPFLAGS_@CONDA_RUST_HOST_LOWER@=""
 
+  export CXXFLAGS_@CONDA_RUST_TARGET_LOWER@="${CXXFLAGS}"
+  export CXXFLAGS_@CONDA_RUST_HOST_LOWER@="" 
+
   export CC_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
   export CXX_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
 
