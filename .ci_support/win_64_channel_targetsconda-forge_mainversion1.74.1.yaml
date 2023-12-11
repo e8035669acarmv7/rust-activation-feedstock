@@ -25,12 +25,12 @@ vc:
 version:
 - 1.74.1
 zip_keys:
-- - channel_sources
-  - channel_targets
-  - version
 - - cross_target_platform
   - rust_arch
   - rust_arch_env
   - rust_default_cc
   - MACOSX_SDK_VERSION
   - MACOSX_DEPLOYMENT_TARGET
+  - channel_sources
+  - channel_targets
+  - version
