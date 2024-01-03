@@ -29,7 +29,7 @@ rust_default_cc_build:
 target_platform:
 - linux-aarch64
 version:
-- 1.74.1
+- 1.75.0
 zip_keys:
 - - cross_target_platform
   - rust_arch
