@@ -89,7 +89,7 @@ MACOSX_DEPLOYMENT_TARGET:
   - 0                                   # [linux]
   - 0                                   # [linux]
   - 0                                   # [linux]
-  - 10.9                                # [linux64 or osx]
+  - 10.12                               # [linux64 or osx]
   - 11.0                                # [linux64 or osx]
   - 0                                   # [linux64 or win64]
   # For osx-64 -> win-64 cross-compiling, set deployment target for the build system
