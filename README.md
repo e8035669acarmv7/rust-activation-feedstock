@@ -91,17 +91,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.76.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.76.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -203,6 +203,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.76.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
@@ -214,13 +221,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.76.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -245,17 +245,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_arm64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.76.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_MACOSX_DEPLOYMENT_TARGET10.12channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.76.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.75.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
