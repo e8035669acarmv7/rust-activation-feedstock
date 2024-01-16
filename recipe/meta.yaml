@@ -19,6 +19,11 @@ outputs:
     script: bld.bat  # [win]
     build:
       skip: True  # [win and vc<14]
+      run_exports:
+        strong_constrains:
+          {% if cross_target_platform.startswith("osx") %}
+          - __osx >={{ MACOSX_DEPLOYMENT_TARGET }}
+          {% endif %}
     requirements:
       host:
         - rust-std-{{ rust_arch }}
