@@ -104,13 +104,13 @@ MACOSX_DEPLOYMENT_TARGET:
   # For osx-64 -> win-64 cross-compiling, set deployment target for the build system
   - 10.12                               # [osx and x86_64]
 version:
-  - 1.76.0  # [linux]
-  - 1.76.0  # [linux]
-  - 1.76.0  # [linux]
-  - 1.76.0  # [linux64 or osx]
-  - 1.76.0  # [linux64 or osx]
-  - 1.76.0  # [linux64 or win64]
-  - 1.76.0  # [osx and x86_64]
+  - 1.77.0  # [linux]
+  - 1.77.0  # [linux]
+  - 1.77.0  # [linux]
+  - 1.77.0  # [linux64 or osx]
+  - 1.77.0  # [linux64 or osx]
+  - 1.77.0  # [linux64 or win64]
+  - 1.77.0  # [osx and x86_64]
 
   - 1.78.0  # [linux]
   - 1.78.0  # [linux]
