@@ -22,10 +22,10 @@ outputs:
       run_exports:
         strong_constrains:
           {% if cross_target_platform.startswith("linux") %}
-          - __glibc >={{ c_stdlib_version }}
+          - __glibc >={{ c_stdlib_ver }}
           {% endif %}
           {% if cross_target_platform.startswith("osx") %}
-          - __osx >={{ c_stdlib_version }}
+          - __osx >={{ c_stdlib_ver }}
           {% endif %}
     requirements:
       host:
@@ -35,10 +35,10 @@ outputs:
         - rust-std-{{ rust_arch }}  {{ version }}.*
 {% if cross_target_platform.startswith("linux") %}
         - gcc_{{ cross_target_platform }}
-        - sysroot_{{ target_platform }} >={{ c_stdlib_version }}
+        - sysroot_{{ target_platform }} >={{ c_stdlib_ver }}
 {% elif cross_target_platform.startswith("osx") %}
         - clang_{{ cross_target_platform }}
-        - macosx_deployment_target_{{ cross_target_platform }} >={{ c_stdlib_version }}
+        - macosx_deployment_target_{{ cross_target_platform }} >={{ c_stdlib_ver }}
 {% elif cross_target_platform.startswith("win") %}
         - cmake                                # [unix]
         - ninja                                # [unix]
