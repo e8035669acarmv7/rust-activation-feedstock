@@ -65,9 +65,9 @@ rust_default_cc:
   - arm64-apple-darwin20.0.0-clang      # [linux64 or osx]
   - clang-cl                            # [linux64 or osx or win64]
 
-# Hacky: Don't call it c_stdlib_version as otherwise, we will get conflicts with cdt_name zipping
-# We only can do this here as we are not using `stdlib('c')`.
-c_stdlib_ver:
+# Don't call it c_stdlib_version as otherwise, we will get conflicts with cdt_name zipping
+# This is also the version for the target, not the host (for cross-compilers)
+target_c_stdlib_version:
   - '2.17'                              # [linux]
   - '2.17'                              # [linux]
   - '2.17'                              # [linux]
@@ -142,7 +142,7 @@ zip_keys:
     - rust_arch
     - rust_arch_env
     - rust_default_cc
-    - c_stdlib_ver
+    - target_c_stdlib_version
     - channel_sources
     - channel_targets
     - version

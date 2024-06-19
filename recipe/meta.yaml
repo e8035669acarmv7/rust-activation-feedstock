@@ -22,10 +22,10 @@ outputs:
       run_exports:
         strong_constrains:
           {% if cross_target_platform.startswith("linux") %}
-          - __glibc >={{ c_stdlib_ver }}
+          - __glibc >={{ target_c_stdlib_verison }}
           {% endif %}
           {% if cross_target_platform.startswith("osx") %}
-          - __osx >={{ c_stdlib_ver }}
+          - __osx >={{ target_c_stdlib_version }}
           {% endif %}
     requirements:
       host:
@@ -35,10 +35,10 @@ outputs:
         - rust-std-{{ rust_arch }}  {{ version }}.*
 {% if cross_target_platform.startswith("linux") %}
         - gcc_{{ cross_target_platform }}
-        - sysroot_{{ target_platform }} >={{ c_stdlib_ver }}
+        - sysroot_{{ target_platform }} >={{ target_c_stdlib_version }}
 {% elif cross_target_platform.startswith("osx") %}
         - clang_{{ cross_target_platform }}
-        - macosx_deployment_target_{{ cross_target_platform }} >={{ c_stdlib_ver }}
+        - macosx_deployment_target_{{ cross_target_platform }} >={{ target_c_stdlib_version }}
 {% elif cross_target_platform.startswith("win") %}
         - cmake                                # [unix]
         - ninja                                # [unix]
@@ -52,7 +52,7 @@ outputs:
       requires:
         - file  # [unix]
       commands:
-        - echo {{ MACOSX_DEPLOYMENT_TARGET }}-{{ rust_arch_env }}-{{ rust_default_cc }}-{{ rust_arch_env_build }}-{{ rust_default_cc_build }}
+        - echo {{ target_c_stdlib_version }}-{{ rust_arch_env }}-{{ rust_default_cc }}-{{ rust_arch_env_build }}-{{ rust_default_cc_build }}
         - set "REQUESTS_CA_BUNDLE="  # [win]
         - set "SSL_CERT_FILE="       # [win]
         - unset REQUESTS_CA_BUNDLE  # [unix]
