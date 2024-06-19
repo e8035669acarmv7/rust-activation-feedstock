@@ -1,3 +1,5 @@
+MACOSX_SDK_VERSION:
+- '0'
 cdt_name:
 - cos7
 channel_sources:
@@ -29,6 +31,7 @@ zip_keys:
   - rust_arch
   - rust_arch_env
   - rust_default_cc
+  - MACOSX_SDK_VERSION
   - target_c_stdlib_version
   - channel_sources
   - channel_targets
