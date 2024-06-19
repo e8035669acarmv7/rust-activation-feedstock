@@ -2,30 +2,26 @@ MACOSX_DEPLOYMENT_TARGET:
 - '10.13'
 MACOSX_SDK_VERSION:
 - '10.13'
-c_stdlib:
-- macosx_deployment_target
-c_stdlib_ver:
-- '11.0'
-c_stdlib_version:
-- '10.13'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- osx-arm64
+- osx-64
 macos_machine:
 - x86_64-apple-darwin13.4.0
 rust_arch:
-- aarch64-apple-darwin
+- x86_64-apple-darwin
 rust_arch_env:
-- AARCH64_APPLE_DARWIN
+- X86_64_APPLE_DARWIN
 rust_arch_env_build:
 - X86_64_APPLE_DARWIN
 rust_default_cc:
-- arm64-apple-darwin20.0.0-clang
+- x86_64-apple-darwin13.4.0-clang
 rust_default_cc_build:
 - x86_64-apple-darwin13.4.0-clang
+target_c_stdlib_version:
+- '10.13'
 target_platform:
 - osx-64
 version:
@@ -35,7 +31,7 @@ zip_keys:
   - rust_arch
   - rust_arch_env
   - rust_default_cc
-  - c_stdlib_ver
+  - target_c_stdlib_version
   - channel_sources
   - channel_targets
   - version
