@@ -1,7 +1,6 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '11.0'
 MACOSX_SDK_VERSION:
-- '10.13'
 - '11.0'
 channel_sources:
 - conda-forge
@@ -32,6 +31,7 @@ zip_keys:
   - rust_arch
   - rust_arch_env
   - rust_default_cc
+  - MACOSX_SDK_VERSION
   - MACOSX_DEPLOYMENT_TARGET
   - target_c_stdlib_version
   - channel_sources
