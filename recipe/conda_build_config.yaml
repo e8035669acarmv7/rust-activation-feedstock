@@ -24,15 +24,16 @@ MACOSX_SDK_VERSION:
 MACOSX_DEPLOYMENT_TARGET:
   - 0                                   # [linux64 or armv7l]
 
+# Don't call it c_stdlib_version as otherwise, we will get conflicts with cdt_name zipping
+# This is also the version for the target, not the host (for cross-compilers)
+target_c_stdlib_version:
+  - '2.17'                              # [linux64 or armv7l]
 version:
-  - 1.72.0
-  # - 1.74.0
+  - 1.79.0  # [linux]
 channel_sources:
-  - e8035669acarmv7,conda-forge
-  # - conda-forge/label/rust_dev,conda-forge
+  - conda-forge  # [linux]
 channel_targets:
-  - e8035669acarmv7 main
-  # - conda-forge rust_dev
+  - conda-forge main  # [linux]
 zip_keys:
   - - cross_target_platform
     - rust_arch
@@ -40,7 +41,8 @@ zip_keys:
     - rust_default_cc
     - MACOSX_SDK_VERSION
     - MACOSX_DEPLOYMENT_TARGET
-  - - channel_sources
+    - target_c_stdlib_version
+    - channel_sources
     - channel_targets
     - version
 docker_image:

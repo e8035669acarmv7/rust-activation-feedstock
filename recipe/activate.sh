@@ -17,6 +17,30 @@ export CC_@CONDA_RUST_HOST_LOWER@="${CC_FOR_BUILD:-${CONDA_PREFIX}/bin/@rust_def
 
 if [[ "@cross_target_platform@" == linux*  ]]; then
   export CARGO_BUILD_RUSTFLAGS="-C link-arg=-Wl,-rpath-link,${PREFIX:-${CONDA_PREFIX}}/lib -C link-arg=-Wl,-rpath,${PREFIX:-${CONDA_PREFIX}}/lib"
+elif [[ "@cross_target_platform@" == win* ]]; then
+  export CARGO_TARGET_@rust_arch_env@_LINKER=${CONDA_PREFIX}/bin/lld-link
+
+  # some rust crates need a linux gnu c compiler at buildtime
+  # thus we need to create custom cflags since the default ones are for clang
+  export AR_@CONDA_RUST_HOST_LOWER@="${AR}"
+  export AR_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/llvm-lib
+
+  export CFLAGS_@CONDA_RUST_HOST_LOWER@=""
+  export CFLAGS_@CONDA_RUST_TARGET_LOWER@="${CFLAGS}"
+
+  export CPPFLAGS_@CONDA_RUST_TARGET_LOWER@="${CPPFLAGS}"
+  export CPPFLAGS_@CONDA_RUST_HOST_LOWER@=""
+
+  export CXXFLAGS_@CONDA_RUST_TARGET_LOWER@="${CXXFLAGS}"
+  export CXXFLAGS_@CONDA_RUST_HOST_LOWER@="" 
+
+  export CC_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
+  export CXX_@CONDA_RUST_TARGET_LOWER@=$CONDA_PREFIX/bin/clang-cl
+
+  export LDFLAGS="$LDFLAGS -manifest:no"
+
+  # Setup CMake Toolchain
+  export CMAKE_GENERATOR=Ninja
 elif [[ "@cross_target_platform@" == osx* ]]; then
   export CARGO_BUILD_RUSTFLAGS="-C link-arg=-Wl,-rpath,${PREFIX:-${CONDA_PREFIX}}/lib"
   if [[ "${CONDA_BUILD:-}" != "" ]]; then
